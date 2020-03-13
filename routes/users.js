@@ -18,19 +18,19 @@ api.post('/signup', async(req, res) => {
     res.cookie('auth_token', token, {
       maxAge: (1000 * 60) * 60 * 336, // 2 weeks
       httpOnly: true,
-      secure: false, 
+      secure: true, 
     });
 
     res.cookie('username', user.username, {
       maxAge: (1000 * 60) * 60 * 336, // 2 weeks
       httpOnly: true,
-      secure: false, 
+      secure: true, 
     });
 
     res.cookie('user_id', user._id, {
       maxAge: (1000 * 60) * 60 * 336, // 2 weeks
       httpOnly: true,
-      secure: false, 
+      secure: true, 
     });
 
     res.status(201).send({
@@ -67,19 +67,19 @@ api.post('/login', async (req, res) => {
     res.cookie('auth_token', token, {
       maxAge: (1000 * 60) * 60 * 336, // 2 weeks
       httpOnly: true,
-      secure: false, 
+      secure: true, 
     });
 
     res.cookie('username', user.username, {
       maxAge: (1000 * 60) * 60 * 336, // 2 weeks
       httpOnly: true,
-      secure: false, 
+      secure: true, 
     });
 
     res.cookie('user_id', user._id, {
       maxAge: (1000 * 60) * 60 * 336, // 2 weeks
       httpOnly: true,
-      secure: false, 
+      secure: true, 
     });
 
     res.status(201).send({
