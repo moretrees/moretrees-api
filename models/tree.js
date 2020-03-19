@@ -9,12 +9,12 @@ const treeSchema = new Schema(
     },
     latitude: {
       type: Number,
-      default: 0,
+      default: -9999,
       required: true
     },
     longitude: {
       type: Number,
-      default: 0,
+      default: -9999,
       required: true
     },
     accuracy:{
@@ -43,6 +43,14 @@ const treeSchema = new Schema(
     status: {
       type: String,
       default: 'incomplete'
+    },
+    completed_upvote:{
+      type: Number,
+      default: 0,
+    },
+    completed_downvote:{
+      type: Number,
+      default: 0,
     },
     createdBy_username: {
       type: String,
